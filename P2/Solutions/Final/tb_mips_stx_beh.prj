@@ -1,0 +1,6 @@
+verilog isim_temp "Datapath.v"
+verilog isim_temp "Control.v"
+verilog isim_temp "ALU.v"
+verilog isim_temp "MIPS.v"
+verilog isim_temp "MIPS_tb.v"
+verilog isim_temp "D:/XILINX/14.7/ISE_DS/ISE//verilog/src/glbl.v"

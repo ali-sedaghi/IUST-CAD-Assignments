@@ -1,0 +1,24 @@
+Running: D:\XILINX\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/__Term6/CAD/Project/Final/tb_mips_isim_beh.exe -prj D:/__Term6/CAD/Project/Final/tb_mips_beh.prj work.tb_mips work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/__Term6/CAD/Project/Final/Datapath.v" into library work
+Analyzing Verilog file "D:/__Term6/CAD/Project/Final/Control.v" into library work
+Analyzing Verilog file "D:/__Term6/CAD/Project/Final/ALU.v" into library work
+Analyzing Verilog file "D:/__Term6/CAD/Project/Final/MIPS.v" into library work
+Analyzing Verilog file "D:/__Term6/CAD/Project/Final/MIPS_tb.v" into library work
+Analyzing Verilog file "D:/XILINX/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Control
+Compiling module ALU
+Compiling module Datapath
+Compiling module MIPS
+Compiling module tb_mips
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 6 Verilog Units
+Built simulation executable D:/__Term6/CAD/Project/Final/tb_mips_isim_beh.exe
+Fuse Memory Usage: 29440 KB
+Fuse CPU Usage: 577 ms

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Sajad/Uni/Spring00/CAD/Project/phase 1/single_cycle_cpu/ALU_tb_isim_beh.exe" -prj "D:/Sajad/Uni/Spring00/CAD/Project/phase 1/single_cycle_cpu/ALU_tb_beh.prj" "work.ALU_tb" "work.glbl" 

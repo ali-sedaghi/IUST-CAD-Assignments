@@ -1,0 +1,612 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: datapath.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "datapath.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "datapath"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : datapath
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\register_file.v" into library work
+Parsing module <register_file>.
+Analyzing Verilog file "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\control_unit.v" into library work
+Parsing module <control_unit>.
+Analyzing Verilog file "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" into library work
+Parsing module <datapath>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <datapath>.
+
+Elaborating module <control_unit>.
+WARNING:HDLCompiler:1127 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\control_unit.v" Line 37: Assignment to rs ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\control_unit.v" Line 38: Assignment to rt ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 39: Assignment to ALUOp ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 42: Assignment to ALUSrc ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 43: Assignment to memWrite ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 44: Assignment to memRead ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 46: Assignment to branch ignored, since the identifier is never used
+
+Elaborating module <register_file>.
+WARNING:HDLCompiler:413 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 76: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <ALU>.
+WARNING:HDLCompiler:1127 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 90: Assignment to zero ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 91: Size mismatch in connection of port <result>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:634 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" Line 79: Net <ALUiInput2[31]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <datapath>.
+    Related source file is "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v".
+WARNING:Xst:647 - Input <rstPC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" line 36: Output port <ALUOp> of the instance <CU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" line 36: Output port <ALUSrc> of the instance <CU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" line 36: Output port <memWrite> of the instance <CU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" line 36: Output port <memRead> of the instance <CU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" line 36: Output port <branch> of the instance <CU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\datapath.v" line 86: Output port <flag> of the instance <alu> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <ALUiInput2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <datapath> synthesized.
+
+Synthesizing Unit <control_unit>.
+    Related source file is "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\control_unit.v".
+WARNING:Xst:647 - Input <iw<25:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <control_unit> synthesized.
+
+Synthesizing Unit <register_file>.
+    Related source file is "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\register_file.v".
+    Found 32-bit register for signal <readData2reg>.
+    Found 32-bit register for signal <readData1reg>.
+    Found 32x32-bit dual-port RAM <Mram_registers> for signal <registers>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  64 D-type flip-flop(s).
+Unit <register_file> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "D:\Sajad\Uni\Spring00\CAD\Project\phase 1\single_cycle_cpu\ALU.v".
+    Found 32-bit shifter logical left for signal <a[31]_b[31]_shift_left_5_OUT> created at line 27
+    Found 32-bit shifter logical right for signal <a[31]_b[31]_shift_right_6_OUT> created at line 29
+    Found 32-bit shifter arithmetic right for signal <a[31]_b[31]_shift_right_7_OUT> created at line 31
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <resultReg<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  32 Latch(s).
+	inferred  10 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
+# Registers                                            : 2
+ 32-bit register                                       : 2
+# Latches                                              : 32
+ 1-bit latch                                           : 32
+# Multiplexers                                         : 12
+ 32-bit 2-to-1 multiplexer                             : 11
+ 5-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <readData2reg_1> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_2> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_3> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_4> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_5> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_6> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_7> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_8> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_9> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_10> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_11> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_12> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_13> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_14> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_15> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_16> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_17> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_18> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_19> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_20> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_21> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_22> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_23> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_24> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_25> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_26> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_27> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_28> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_29> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_30> of sequential type is unconnected in block <RF>.
+WARNING:Xst:2677 - Node <readData2reg_31> of sequential type is unconnected in block <RF>.
+
+Synthesizing (advanced) Unit <register_file>.
+INFO:Xst:3226 - The RAM <Mram_registers> will be implemented as a BLOCK RAM, absorbing the following register(s): <readData1reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <writeAddr>     |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     addrB          | connected to signal <readAddr1>     |          |
+    |     doB            | connected to signal <readData1reg>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_registers1> will be implemented as a BLOCK RAM, absorbing the following register(s): <readData2reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <writeAddr>     |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     addrB          | connected to signal <readAddr2>     |          |
+    |     doB            | connected to signal <readData2reg>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <register_file> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port block RAM                         : 2
+# Multiplexers                                         : 11
+ 32-bit 2-to-1 multiplexer                             : 10
+ 5-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <ALU> ...
+WARNING:Xst:1294 - Latch <resultReg_30> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_27> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_29> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_28> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_24> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_26> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_25> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_23> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_22> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_19> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_21> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_20> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_16> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_18> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_17> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_13> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_15> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_14> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_10> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_12> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_11> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_7> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_9> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_8> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_4> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_6> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_5> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_1> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_3> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_2> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_0> is equivalent to a wire in block <ALU>.
+WARNING:Xst:1294 - Latch <resultReg_31> is equivalent to a wire in block <ALU>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block datapath, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : datapath.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 22
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 5
+#      LUT4                        : 3
+#      LUT5                        : 1
+#      LUT6                        : 7
+#      MUXF7                       : 1
+#      VCC                         : 1
+# RAMS                             : 2
+#      RAMB18E1                    : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 28
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   19  out of  63400     0%  
+    Number used as Logic:                19  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     19
+   Number with an unused Flip Flop:      19  out of     19   100%  
+   Number with an unused LUT:             0  out of     19     0%  
+   Number of fully used LUT-FF pairs:     0  out of     19     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          37
+ Number of bonded IOBs:                  31  out of    210    14%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.103ns (Maximum Frequency: 322.269MHz)
+   Minimum input arrival time before clock: 3.757ns
+   Maximum output required time after clock: 2.606ns
+   Maximum combinational path delay: 2.915ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.103ns (frequency: 322.269MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               3.103ns (Levels of Logic = 1)
+  Source:            RF/Mram_registers (RAM)
+  Destination:       RF/Mram_registers1 (RAM)
+  Source Clock:      clk falling
+  Destination Clock: clk falling
+
+  Data Path: RF/Mram_registers to RF/Mram_registers1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO0    2   1.846   0.299  RF/Mram_registers (readData1<0>)
+     LUT4:I3->O            2   0.097   0.283  Mmux_writeData11 (writeData<0>)
+     RAMB18E1:DIADI0           0.577          RF/Mram_registers1
+    ----------------------------------------
+    Total                      3.103ns (2.520ns logic, 0.583ns route)
+                                       (81.2% logic, 18.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 398 / 30
+-------------------------------------------------------------------------
+Offset:              3.757ns (Levels of Logic = 5)
+  Source:            iw<30> (PAD)
+  Destination:       RF/Mram_registers1 (RAM)
+  Destination Clock: clk falling
+
+  Data Path: iw<30> to RF/Mram_registers1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.697  iw_30_IBUF (iw_30_IBUF)
+     LUT5:I0->O            1   0.097   0.556  alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT12 (alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT11)
+     LUT4:I0->O            1   0.097   0.693  alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT13 (alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT12)
+     LUT6:I0->O            2   0.097   0.561  alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT16 (alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT15)
+     LUT4:I0->O            2   0.097   0.283  Mmux_writeData11 (writeData<0>)
+     RAMB18E1:DIADI0           0.577          RF/Mram_registers1
+    ----------------------------------------
+    Total                      3.757ns (0.966ns logic, 2.791ns route)
+                                       (25.7% logic, 74.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.606ns (Levels of Logic = 2)
+  Source:            RF/Mram_registers (RAM)
+  Destination:       ALUOutput (PAD)
+  Source Clock:      clk falling
+
+  Data Path: RF/Mram_registers to ALUOutput
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO0    2   1.846   0.383  RF/Mram_registers (readData1<0>)
+     LUT2:I0->O            1   0.097   0.279  alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT17 (ALUOutput_OBUF)
+     OBUF:I->O                 0.000          ALUOutput_OBUF (ALUOutput)
+    ----------------------------------------
+    Total                      2.606ns (1.943ns logic, 0.663ns route)
+                                       (74.6% logic, 25.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 35 / 1
+-------------------------------------------------------------------------
+Delay:               2.915ns (Levels of Logic = 6)
+  Source:            iw<30> (PAD)
+  Destination:       ALUOutput (PAD)
+
+  Data Path: iw<30> to ALUOutput
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.697  iw_30_IBUF (iw_30_IBUF)
+     LUT5:I0->O            1   0.097   0.556  alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT12 (alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT11)
+     LUT4:I0->O            1   0.097   0.693  alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT13 (alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT12)
+     LUT6:I0->O            2   0.097   0.299  alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT16 (alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT15)
+     LUT2:I1->O            1   0.097   0.279  alu/Mmux_control[3]_resultReg[31]_wide_mux_8_OUT17 (ALUOutput_OBUF)
+     OBUF:I->O                 0.000          ALUOutput_OBUF (ALUOutput)
+    ----------------------------------------
+    Total                      2.915ns (0.389ns logic, 2.526ns route)
+                                       (13.3% logic, 86.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.103|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.95 secs
+ 
+--> 
+
+Total memory usage is 4616812 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  109 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

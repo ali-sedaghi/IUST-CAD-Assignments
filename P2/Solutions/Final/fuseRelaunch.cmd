@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/__Term6/CAD/Project/Final/tb_mips_isim_beh.exe" -prj "D:/__Term6/CAD/Project/Final/tb_mips_beh.prj" "work.tb_mips" "work.glbl" 

@@ -1,0 +1,4 @@
+verilog work "register_file.v"
+verilog work "control_unit.v"
+verilog work "ALU.v"
+verilog work "datapath.v"

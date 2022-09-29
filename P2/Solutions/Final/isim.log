@@ -1,0 +1,33 @@
+ISim log file
+Running: D:\__Term6\CAD\Project\Final\tb_mips_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/__Term6/CAD/Project/Final/tb_mips_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Write on memory. address:4c, value:         0
+Write on memory. address:4c, value:         0
+Write on memory. address:4c, value:         1
+# run 1.00us
+Write on memory. address:4c, value:         3
+Write on memory. address:4c, value:         6
+Write on memory. address:4c, value:        10
+# run 1.00us
+Write on memory. address:4c, value:        15
+Write on memory. address:4c, value:        21
+Write on memory. address:4c, value:        28
+# run 1.00us
+Write on memory. address:4c, value:        36
+Write on memory. address:4c, value:        45
+Write on memory. address:4c, value:        55
+Write on memory. address:4c, value:        66
+# run 1.00us
+Write on memory. address:4c, value:        78
+Write on memory. address:4c, value:        91
+Write on memory. address:4c, value:       105
+# run 1.00us
+Write on memory. address:4c, value:       120
+Stopped at time : 5395 ns :  in File "D:/__Term6/CAD/Project/Final/Datapath.v" Line 124 
